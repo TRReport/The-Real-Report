@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About — The Real Report</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { margin:0; padding-top:60px; font-family:Arial,sans-serif; background:#000; color:#eee; line-height:1.6; }
+    main { max-width:1000px; margin:auto; padding:20px; }
+    h1,h2 { color:#0f0; margin-top:24px; }
+    .photo-placeholder { border:1px dashed #555; padding:30px; margin:20px 0; text-align:center; color:#777; }
+    footer { text-align:center; color:#777; margin:40px 0 20px; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+  <!-- Shared navigation -->
+  <div id="include-topbar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("include-topbar").innerHTML = html);
+  </script>
+
+  <main>
+    <header style="text-align:center;margin-bottom:40px;">
+      <h1>About The Real Report</h1>
+      <p style="font-size:1.2em;color:#ccc;">
+        Why this archive exists, and what drives it.
+      </p>
+    </header>
+
+    <section>
+      <h2>Our Purpose</h2>
+      <p>
+        The Real Report was created to keep record of what really happens in our communities — not just the official stories, but the lived truth. 
+        Too often, events are rewritten, watered down, or ignored. This site is here to preserve testimony, evidence, and context so that no one can say “we didn’t know.”
+      </p>
+    </section>
+
+    <section>
+      <h2>What We Do</h2>
+      <ul>
+        <li><strong>Document:</strong> Collect photos, videos, and first‑hand accounts from people on the ground.</li>
+        <li><strong>Expose:</strong> Show the gap between official statements and what really happened.</li>
+        <li><strong>Preserve:</strong> Build a permanent record so future generations can see the truth for themselves.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Approach</h2>
+      <p>
+        We don’t claim to be neutral. We stand with the people who live through these events. 
+        We use plain language, clear evidence, and community voices. 
+        Every page is built to be accessible, responsive, and easy to navigate — because truth should never be hidden behind complexity.
+      </p>
+    </section>
+
+    <section>
+      <h2>Who We Are</h2>
+      <p>
+        The Real Report is a community‑driven project. It is built by people who live here, who see what happens, and who refuse to let the record be erased. 
+        We are not funded by government or political parties. We are independent, and we answer only to the truth.
+      </p>
+      <div class="photo-placeholder">[ Add team / community photo here ]</div>
+    </section>
+
+    <section>
+      <h2>Why It Matters</h2>
+      <p>
+        Without archives like this, the only story left is the one told by those in power. 
+        By keeping our own record, we make sure the voices of ordinary people are not silenced. 
+        This is about accountability, memory, and justice.
+      </p>
+    </section>
+
+    <footer>
+      <p>The Real Report — About Page</p>
+    </footer>
+  </main>
+
+</body>
+</html>

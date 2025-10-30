@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ANC — Another Night with Candles</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { margin:0; padding-top:60px; font-family:Arial,sans-serif; background:#000; color:#eee; line-height:1.6; }
+    main { max-width:1000px; margin:auto; padding:20px; }
+    h1,h2 { color:#0f0; margin-top:24px; }
+    .quote { border-left:3px solid rgba(15,255,15,0.4); padding-left:12px; color:#cfc; margin:12px 0; }
+    .photo-placeholder { border:1px dashed #555; padding:30px; margin:20px 0; text-align:center; color:#777; }
+    footer { text-align:center; color:#777; margin:40px 0 20px; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+  <!-- Shared navigation -->
+  <div id="include-topbar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("include-topbar").innerHTML = html);
+  </script>
+
+  <main>
+    <header style="text-align:center;margin-bottom:40px;">
+      <h1>African National Congress (ANC)</h1>
+      <h2 style="color:#aaa;">Also known by the people as: “Another Night with Candles”</h2>
+      <p style="font-size:1.2em;color:#ccc;">
+        Power cuts, silence during Plastic City, and a trail of broken promises.
+      </p>
+    </header>
+
+    <section>
+      <h2>Where was the ANC in Plastic City?</h2>
+      <p>
+        When Plastic City was torn down in October 2025, the bulldozers rolled in, SAPS and metro police stood by, 
+        and families were left in the dust. The DA rushed to claim credit. Local figures like Vlam were named as drivers of the removal.  
+        But **where was the ANC?**  
+      </p>
+      <p>
+        No strong voice. No clear plan. No presence on the ground.  
+        The party that calls itself the liberation movement was nowhere to be seen when one of Brakpan’s poorest communities was erased.  
+      </p>
+    </section>
+
+    <section>
+      <h2>Another Night with Candles</h2>
+      <p>
+        The nickname says it all. For years, residents have joked bitterly that ANC stands for 
+        <strong>“Another Night with Candles.”</strong> Load‑shedding has become the daily reality.  
+        Shops lose stock, families lose food, children study by torchlight.  
+      </p>
+      <p>
+        And while people sit in the dark, leaders talk about “plans” and “stability” that never arrive.  
+        The lights go out, and the silence grows louder.
+      </p>
+    </section>
+
+    <section>
+      <h2>Questions the ANC won’t answer</h2>
+      <ul>
+        <li>Why were they absent when Plastic City was demolished?</li>
+        <li>Why do they promise power but deliver candles?</li>
+        <li>Why do they speak of progress while communities collapse?</li>
+      </ul>
+      <p>
+        These questions hang in the air, unanswered. And every blackout, every silence, makes them harder to ignore.
+      </p>
+    </section>
+
+    <section>
+      <h2>Photos and videos</h2>
+      <p class="note">Add your evidence here — photos of blackouts, candles in homes, and the empty space where Plastic City once stood.</p>
+      <div class="photo-placeholder">[ Add blackout / candle photos here ]</div>
+      <div class="photo-placeholder">[ Add Plastic City demolition photos here ]</div>
+      <div class="photo-placeholder">[ Add video clips here ]</div>
+    </section>
+
+    <footer>
+      <p>The Real Report — ANC Page</p>
+    </footer>
+  </main>
+
+</body>
+</html>

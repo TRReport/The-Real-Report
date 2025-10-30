@@ -1,0 +1,66 @@
+<!-- Top Navigation Bar -->
+<style>
+  body {
+    margin: 0;
+    padding-top: 60px; /* space for navbar */
+    font-family: Arial, sans-serif;
+  }
+
+  /* Navbar container */
+  #topbar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;   /* center all buttons */
+    align-items: center;
+    flex-wrap: wrap;           /* allow wrapping on small screens */
+    padding: 5px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  }
+
+  /* Navbar links */
+  #topbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+    margin: 2px;
+  }
+
+  #topbar a:hover {
+    background-color: #00ff00;
+    color: #111;
+    border-radius: 4px;
+  }
+
+  /* Tablet adjustments */
+  @media (max-width: 768px) {
+    #topbar a {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  }
+
+  /* Small phone adjustments */
+  @media (max-width: 480px) {
+    #topbar a {
+      font-size: 12px;
+      padding: 6px 8px;
+    }
+  }
+</style>
+
+<div id="topbar">
+  <a href="index.html">Home</a>
+  <a href="plasticcity.html">Plastic City</a>
+  <a href="da.html">DA</a>
+  <a href="anc.html">ANC</a>
+  <a href="vfplus.html">VF Plus</a>
+  <a href="coverment.html">Government</a>
+  <a href="flatearth.html">Flat Earth</a>
+  <a href="about.html">About</a>
+</div>

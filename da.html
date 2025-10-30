@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DA — The Real Report</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { margin:0; padding-top:60px; font-family:Arial,sans-serif; background:#000; color:#eee; line-height:1.6; }
+    main { max-width:1000px; margin:auto; padding:20px; }
+    h1,h2 { color:#0f0; margin-top:24px; }
+    .quote { border-left:3px solid rgba(15,255,15,0.4); padding-left:12px; color:#cfc; margin:12px 0; }
+    .photo-placeholder { border:1px dashed #555; padding:30px; margin:20px 0; text-align:center; color:#777; }
+    footer { text-align:center; color:#777; margin:40px 0 20px; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+  <!-- Shared navigation -->
+  <div id="include-topbar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("include-topbar").innerHTML = html);
+  </script>
+
+  <main>
+    <header style="text-align:center;margin-bottom:40px;">
+      <h1>Democratic Alliance (DA)</h1>
+      <p style="font-size:1.2em;color:#ccc;">
+        What they said about Plastic City, and what really happened.
+      </p>
+    </header>
+
+    <section>
+      <h2>Official DA statements</h2>
+      <p>
+        After the demolition of Plastic City, DA ward councillor <strong>Brandon Pretorius</strong> told the press that 
+        “100% of the structures have been removed” and that “the real work begins now” with a 10‑point rehabilitation plan[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://www.citizen.co.za/brakpan-herald/news-headlines/2025/10/15/rehab-plan-in-motion-2/?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054&citationId=1 "The Citizen").
+      </p>
+      <p class="quote">
+        “Plastic City cleared: Now the real work begins.” — Brakpan Herald, Oct 2025
+      </p>
+    </section>
+
+    <section>
+      <h2>Community reality</h2>
+      <ul>
+        <li>Families were left homeless with no relocation plan.</li>
+        <li>Illegal mining continues in nearby areas, untouched.</li>
+        <li>Residents say the DA claimed victory while ignoring the suffering on the ground.</li>
+      </ul>
+      <p>
+        Many locals feel the DA used Plastic City as a photo‑op and political credit grab, not as a real solution.
+      </p>
+    </section>
+
+    <section>
+      <h2>The Pretorius problem</h2>
+      <p>
+        Councillor Brandon Pretorius’s name has become tied to the demolition. For some residents, his statements felt like 
+        celebrating destruction rather than helping people. This has left a bitter taste — even those who share his surname 
+        feel embarrassed by the association.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contradictions</h2>
+      <p>
+        The DA said the demolition was about safety and progress. But:
+      </p>
+      <ul>
+        <li>No clear relocation or housing was provided.</li>
+        <li>Police and metro officers were seen standing by while zama‑zamas carried on elsewhere.</li>
+        <li>The DA took credit, but the real drivers of the removal were metro police, SAPS, contractors, and local figures like Vlam.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Photos and videos</h2>
+      <p class="note">Add your evidence here — photos of the demolition, police presence, and DA statements.</p>
+      <div class="photo-placeholder">[ Add DA / demolition photos here ]</div>
+      <div class="photo-placeholder">[ Add video clips here ]</div>
+    </section>
+
+    <footer>
+      <p>The Real Report — DA Page</p>
+    </footer>
+  </main>
+
+</body>
+</html>

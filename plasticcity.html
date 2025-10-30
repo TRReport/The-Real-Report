@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plastic City — The Real Report</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { margin:0; padding-top:60px; font-family:Arial,sans-serif; background:#000; color:#eee; line-height:1.6; }
+    main { max-width:1000px; margin:auto; padding:20px; }
+    h1,h2 { color:#0f0; margin-top:24px; }
+    .media-box { margin:20px 0; border:1px solid #333; border-radius:6px; overflow:hidden; }
+    video { width:100%; max-height:480px; display:block; background:#111; }
+    iframe { width:100%; height:300px; border:0; display:block; }
+    img { width:100%; display:block; }
+    footer { text-align:center; color:#777; margin:40px 0 20px; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+  <!-- Shared navigation -->
+  <div id="include-topbar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("include-topbar").innerHTML = html);
+  </script>
+
+  <main>
+    <header style="text-align:center;margin-bottom:40px;">
+      <h1>Plastic City: The Ground Truth</h1>
+      <p style="font-size:1.2em;color:#ccc;">
+        Brakpan’s most contested settlement — demolished, denied, and rewritten.
+      </p>
+    </header>
+
+    <section>
+      <h2>What Happened</h2>
+      <p>
+        In October 2025, Plastic City was demolished. Reports confirm that <strong>Ekurhuleni Metro Police, SAPS, and municipal contractors</strong> were on site. 
+        But locals also say <strong>Vlam was the main figure who drove the removal</strong>, working with his own resources and force. 
+        Shacks were torn down with heavy machinery, many set on fire, and families were left displaced. The SPCA was called to rescue animals.
+      </p>
+    </section>
+
+    <section>
+      <h2>Rose Tulee — Community Claims</h2>
+      <p>
+        Locals point to <strong>Rose Tulee</strong> in Minnebron. They say it has grown quickly, adding new features like a tennis area. 
+        The claim is that money from illegal mining is being mixed with normal business income, making everything look legitimate. 
+        These are <strong>community claims</strong>, not proven facts, but they are part of the story people tell.
+      </p>
+
+      <!-- Google Maps embed for Rose Tulee -->
+      <div class="media-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1730290000!6m8!1m7!1sKbGYTg7Vd8KHCa6u7!2m2!1d-26.236!2d28.364!3f0!4f0!5f0.782" allowfullscreen></iframe>
+      </div>
+
+      <!-- Photo placeholder -->
+      <div class="media-box">
+        <img src="media/rose-tulee.jpg" alt="Rose Tulee photo">
+      </div>
+
+      <!-- Video placeholder -->
+      <div class="media-box">
+        <video controls>
+          <source src="media/rose-tulee-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section>
+      <h2>Springs Conflict</h2>
+      <p>
+        Community members also say that after the demolition, groups from Springs came looking for revenge. 
+        They claim there was an attempt to shoot at a man connected to the removals, because the loss of Plastic City cut off money from gold. 
+        These accounts describe white gunmen involved in the attack. Again, these are <strong>community reports</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Underground Tunnels & Collusion</h2>
+      <p>
+        Residents talk about underground tunnels running under Brakpan, even under the FNB bank. 
+        They believe government officials and police have looked the other way because money was flowing from illegal mining. 
+        Parties like the DA and VF Plus are accused of wanting credit for the demolition while ignoring the deeper corruption. 
+        These claims remain unverified but are widely repeated in the community.
+      </p>
+      <div class="media-box">
+        <img src="media/cops-with-zamazamas.jpg" alt="Police with zama-zamas">
+      </div>
+    </section>
+
+    <footer>
+      <p>The Real Report – Plastic City Archive</p>
+    </footer>
+  </main>
+
+</body>
+</html>

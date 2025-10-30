@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VF Plus — The Real Report</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { margin:0; padding-top:60px; font-family:Arial,sans-serif; background:#000; color:#eee; line-height:1.6; }
+    main { max-width:1000px; margin:auto; padding:20px; }
+    h1,h2 { color:#0f0; margin-top:24px; }
+    .quote { border-left:3px solid rgba(15,255,15,0.4); padding-left:12px; color:#cfc; margin:12px 0; }
+    .photo-placeholder { border:1px dashed #555; padding:30px; margin:20px 0; text-align:center; color:#777; }
+    footer { text-align:center; color:#777; margin:40px 0 20px; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+  <!-- Shared navigation -->
+  <div id="include-topbar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("include-topbar").innerHTML = html);
+  </script>
+
+  <main>
+    <header style="text-align:center;margin-bottom:40px;">
+      <h1>Freedom Front Plus (VF Plus)</h1>
+      <p style="font-size:1.2em;color:#ccc;">
+        Promises, excuses, and silence when it mattered.
+      </p>
+    </header>
+
+    <section>
+      <h2>Where was the leader?</h2>
+      <p>
+        When the community met with <strong>Vlam</strong> to talk about Plastic City and the fallout, 
+        the VF Plus leader was nowhere to be seen. Instead, they sent a lawyer or representative.  
+        The excuse? “He can’t be here — he’s on leave, he’s busy, there are rules.”  
+      </p>
+      <p>
+        People don’t forget that. When it was time to face the community, the leader stayed away.  
+        The message was clear: <strong>they can come, but they won’t — because they are scared of the people’s comeback.</strong>
+      </p>
+    </section>
+
+    <section>
+      <h2>Excuses instead of answers</h2>
+      <ul>
+        <li>“On leave.”</li>
+        <li>“Too busy.”</li>
+        <li>“Rules don’t allow it.”</li>
+      </ul>
+      <p>
+        Every excuse was used. But none of them answered the real question: why won’t VF Plus stand in front of the people they claim to represent?
+      </p>
+    </section>
+
+    <section>
+      <h2>Just like the others</h2>
+      <p>
+        The ANC hides behind silence. The DA grabs credit while people suffer.  
+        And the VF Plus? They hide behind lawyers and excuses.  
+        Different parties, same pattern: <strong>when the people demand answers, the politicians vanish.</strong>
+      </p>
+    </section>
+
+    <section>
+      <h2>Photos and videos</h2>
+      <p class="note">Add your evidence here — photos of the meeting, the empty chair, and VF Plus statements.</p>
+      <div class="photo-placeholder">[ Add VF Plus meeting photos here ]</div>
+      <div class="photo-placeholder">[ Add video clips here ]</div>
+    </section>
+
+    <footer>
+      <p>The Real Report — VF Plus Page</p>
+    </footer>
+  </main>
+
+</body>
+</html>
