@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Real Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Courier New', monospace;
+      color: #00ff00;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    /* Matrix binary background */
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    /* Main content */
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 20px;
+      line-height: 1.8;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    h2 {
+      margin-top: 40px;
+      text-shadow: 0 0 5px #00ff00;
+      font-size: 1.6em;
+    }
+
+    p, li {
+      font-size: 1.1em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: ">";
+      margin-right: 8px;
+      color: #0f0;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #0f0;
+      opacity: 0.7;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      main {
+        padding: 60px 15px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.3em;
+      }
+      p, li {
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+      p, li {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Include topbar -->
+  <div id="include-topbar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("include-topbar").innerHTML = data);
+  </script>
+
+  <!-- Matrix background -->
+  <canvas id="matrix"></canvas>
+  <script>
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    const letters = "01";
+    const fontSize = 14;
+    let columns = canvas.width / fontSize;
+    const drops = [];
+
+    for (let x = 0; x < columns; x++) {
+      drops[x] = 1;
+    }
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#0f0";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+  </script>
+
+  <!-- Main content -->
+  <main>
+    <header>
+      <h1>The Real Report</h1>
+      <p style="font-size:1.2em; color:#ccc;">
+        A digital archive of truth — Plastic City, corruption, politics, lies, and the systems that keep people in the dark.
+      </p>
+    </header>
+
+    <section>
+      <h2>Why This Exists</h2>
+      <p>
+        The Real Report was built because the official stories don’t match reality. 
+        Politicians take credit, police stand by, and the media repeats half-truths. 
+        Meanwhile, communities like Plastic City are destroyed, illegal mining thrives, 
+        and people are left with nothing but silence.
+      </p>
+      <p>
+        This site is not about one party or one event. It’s about <strong>everything they don’t want you to see</strong>:
+        the demolitions, the collusion, the corruption, and the way lies spread — from local politics to global conspiracies.
+      </p>
+    </section>
+
+    <section>
+      <h2>What We Cover</h2>
+      <ul>
+        <li>Plastic City: what really happened on the ground</li>
+        <li>Political parties: DA, ANC, VF Plus — their claims vs reality</li>
+        <li>Government failures: silence, collusion, and denial</li>
+        <li>Disinformation: from flat earth to fake promises</li>
+        <li>Community voices: testimony that cannot be erased</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Mission</h2>
+      <p>
+        To document. To expose. To hold accountable.  
+        This is a living archive — it will grow as more evidence and testimony comes forward.  
+        If you were there, if you saw it, your voice belongs here.
+      </p>
+    </section>
+
+    <footer>
+      <p>The Real Report — Truth cannot be deleted.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
